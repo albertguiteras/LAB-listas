@@ -1,0 +1,202 @@
+/* ============================================================
+   1. CONFIGURACIÓN GLOBAL Y ESTRUCTURA DE PÁGINA
+   ============================================================ */
+body {
+  background-color: rgb(221, 228, 248); /* Color de fondo general */
+  margin: 0; /* Quita el borde blanco del navegador */
+  display: flex; /* Activa el contenedor flexible */
+  flex-direction: column; /* Apila Header, Main y Footer en vertical */
+  min-height: 100vh; /* Altura mínima de toda la pantalla */
+}
+
+/* ============================================================
+   2. ENCABEZADO (HEADER) Y NAVEGACIÓN
+   ============================================================ */
+header {
+  font-family: "Inter", sans-serif; /* Fuente del encabezado */
+  display: flex; /* Alinea logo y menú en horizontal */
+  flex-direction: row; /* Coloca elementos en fila */
+  justify-content: space-between; /* Logo a la izq, menú a la der */
+  align-items: center; /* Centra el texto verticalmente */
+  background-color: white; /* Fondo blanco de la barra */
+  width: 100%; /* Ancho total */
+  height: 70px; /* Grosor de la barra superior */
+}
+
+h1 {
+  font-size: 24px; /* Tamaño del nombre del robot */
+  color: rgb(45, 63, 226); /* Azul del logo */
+  margin-left: 80px; /* Margen izquierdo del logo */
+}
+
+nav ul {
+  display: flex; /* Enlaces en fila */
+  list-style: none; /* Quita los puntos de la lista */
+  gap: 25px; /* Separación entre links */
+  margin-right: 80px; /* Margen derecho del menú */
+}
+
+nav a {
+  font-size: 15px; /* Tamaño letra enlaces */
+  text-decoration: none; /* Quita el subrayado */
+  color: rgb(104, 103, 103); /* Gris de los enlaces */
+  font-weight: 600; /* Grosor semi-negrita */
+}
+
+nav ul a:hover {
+  color: #000000; /* Cambia a negro al pasar el ratón */
+}
+
+/* ============================================================
+   3. SECCIÓN PRINCIPAL (HERO / CONTENIDO)
+   ============================================================ */
+main {
+  font-family: "Inter", sans-serif; /* Fuente del cuerpo */
+  display: flex; /* Contenedor flexible del contenido */
+  flex-direction: column;
+  align-items: center; /* Centra el grid verticalmente */
+  margin-left: 80px; /* Alineación lateral */
+  margin-right: 80px; /* Alineación lateral */
+  flex-grow: 1; /* Rellena el espacio sobrante del centro */
+}
+
+.contenedor {
+  display: grid; /* Divide en rejilla */
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales (50/50) */
+  gap: 50px; /* Separación entre texto e imagen */
+  align-items: center; /* Centra texto e imagen entre sí */
+  max-width: 1100px; /* Ancho máximo contenido */
+  margin: 50px auto; /* Centra el bloque horizontalmente */
+  padding: 20px; /* Margen interno */
+  margin-bottom: 100px; /* Separación del bloque con el siguiente contenido */
+}
+
+/* --- BLOQUE DE TEXTO (IZQUIERDA) --- */
+.izquierda h2 {
+  font-size: 84px; /* Tamaño del título gigante */
+  font-weight: 540; /* Grosor del título */
+  line-height: 1.1; /* Interlineado estrecho */
+  margin-bottom: 20px; /* Separación con el párrafo */
+}
+
+.azul {
+  color: #1a56f0; /* Clase para texto azul */
+}
+
+.izquierda p {
+  font-size: 18px; /* Tamaño letra párrafo */
+  color: #555; /* Gris suave para lectura */
+  line-height: 1.6; /* Interlineado amplio */
+}
+
+/* --- BLOQUE DE IMAGEN (DERECHA) --- */
+.derecha {
+  display: flex; /* Flex para la imagen */
+  justify-content: center; /* Centra la imagen en su columna */
+  border-radius: 40px; /* Curvatura del contenedor */
+}
+
+.derecha img {
+  max-width: 100%; /* Ajusta imagen al ancho de columna */
+  height: auto; /* Mantiene proporción imagen */
+  border-radius: 10px; /* Redondeado de la foto */
+}
+
+img {
+  box-shadow: #6e7a8a 0px 10px 20px -5px; /* Sombra sutil de la imagen */
+}
+
+section {
+  font-family:
+    "Inter", sans-serif; /* Fuente del bloque de texto debajo de la imagen */
+  display: flex; /* Flex para centrar el bloque */
+  flex-direction: column; /* Apila título y párrafo en vertical */
+  align-items: center; /* Centra el bloque verticalmente */
+  justify-content: center; /* Centra el bloque horizontalmente */
+  max-width: 1100px; /* Ancho máximo del bloque */
+  background-color: #7597ec;
+  padding: 10px 20px; /* Colchón interno del bloque */
+  border-radius: 20px; /* Curvatura del bloque */
+  width: 100%; /* Ancho total del bloque */
+  margin: 15px; /* Separación vertical y centrado horizontal */
+}
+
+section h3 {
+  font-size: 32px; /* Tamaño del título del bloque */
+  color: rgb(0, 0, 0); /* Color del título */
+  margin: 10px 0; /* Separación vertical del título */
+}
+
+section p {
+  font-size: 18px; /* Tamaño del párrafo del bloque */
+  color: rgb(51, 48, 48); /* Color del párrafo */
+  margin: 0; /* Quita márgenes del párrafo */
+}
+
+button {
+  font-family: "Inter", sans-serif; /* Fuente del botón */
+  margin-top: 30px; /* Separación del botón con el texto */
+  padding: 10px 30px; /* Colchón interno del botón */
+  font-size: 22px; /* Tamaño letra del botón */
+  color: white; /* Color del texto del botón */
+  background-color: #114de2; /* Color de fondo del botón */
+  border: none; /* Sin borde */
+  border-radius: 30px; /* Curvatura del botón */
+  cursor: pointer; /* Cambia el cursor al pasar por el botón */
+  transition: background-color 0.2s ease; /* Animación suave de color */
+  margin-bottom: 10px; /* Separación inferior del botón */
+}
+
+button:hover {
+  background-color: #2a3755; /* Color de fondo al pasar el ratón */
+}
+
+/* ============================================================
+   4. PIE DE PÁGINA (FOOTER)
+   ============================================================ */
+footer {
+  font-family: system-ui, sans-serif; /* Fuente del pie de página */
+  display: grid; /* Organiza el footer con rejilla */
+  grid-template-columns: 1fr auto; /* Izquierda flexible, derecha fija */
+  row-gap: 4px; /* Espacio entre las dos filas */
+  padding: 3px 50px; /* Colchón interno del footer */
+}
+
+footer h4 {
+  grid-column: 1; /* Posición: Columna 1 */
+  grid-row: 1; /* Posición: Fila 1 */
+  margin: 0; /* Quita márgenes */
+  color: #3c444e; /* Gris oscuro */
+  font-size: 16px; /* Tamaño título footer */
+}
+
+footer p {
+  grid-column: 1; /* Posición: Columna 1 */
+  grid-row: 2; /* Posición: Fila 2 */
+  margin: 0; /* Quita márgenes */
+  color: #6e7a8a; /* Gris texto legal */
+  font-size: 14px; /* Tamaño pequeño */
+}
+
+footer ul {
+  grid-column: 2; /* Posición: Columna 2 */
+  grid-row: 1 / 3; /* Ocupa las dos filas de altura */
+  align-self: center; /* Centrado vertical */
+  display: flex; /* Enlaces en horizontal */
+  list-style: none; /* Sin puntos */
+  margin: 0; /* Quita márgenes */
+  padding: 0; /* Quita relleno */
+  gap: 20px; /* Separación entre enlaces footer */
+}
+
+footer ul a {
+  text-decoration: none; /* Sin subrayado */
+  color: #737c86; /* Gris enlaces footer */
+  font-size: 14px; /* Tamaño letra links */
+  font-weight: 500; /* Grosor medio */
+  transition: color 0.2s ease; /* Animación suave de color */
+}
+
+footer ul a:hover {
+  color: #334155; /* Color al pasar el ratón */
+}
